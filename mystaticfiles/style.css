@@ -1,0 +1,23 @@
+body {
+    background-color: gray;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.home__text {
+    font-size: 32px;
+}
+
+footer {
+    margin-top: auto;
+}

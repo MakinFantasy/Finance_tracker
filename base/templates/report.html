@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="report__wrapper">
+        <div class="report__title">
+            <h2>Report</h2>
+        </div>
+        <div class="report__month">
+            <p>Month: {{ month }}</p>
+        </div>
+        <div class="report__list-wrapper">
+            <ul class="report__list">
+                {% for key, value in data.items %}
+                    <li class="report__list-item">
+                        <h3 class="item__title">{{ key }}</h3>
+                        <p class="item__cost">Cost: {{ value }}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

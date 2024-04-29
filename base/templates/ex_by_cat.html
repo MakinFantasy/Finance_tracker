@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="expense__wrapper">
+        <h1 class="expense__cat">
+            {{ category.name }}
+        </h1>
+        <ul class="expense__list">
+            {% for ex in expenses %}
+                <li class="expense__list-item">
+                    <div class="expense__list-card">
+                        <h3 class="expense__name">{{ ex.name }} </h3>
+                        <p class="expense__desc">Description: {{ ex.description }} </p>
+                        <p class="expense__cost">Price: {{ ex.cost }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

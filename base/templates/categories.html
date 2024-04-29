@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="category__wrapper">
+        <a href="{% url 'create_category' %}" class="category__create">Create category</a>
+        <ul class="category__list">
+            {% for cat in categories %}
+                <li class="category__list-item">
+                    <div class="category__list-card">
+                        <h3 class="category__name"> {{ cat.name }} </h3>
+                        <p class="category__desc"> {{ cat.description }} </p>
+                        <a href="{{ cat.id }}">Expenses</a>
+                        <a href="{% url 'update_category' pk=cat.id %}">Edit</a>
+                        <a class="delete__btn" href="{% url 'delete_category' pk=cat.id %}">Delete</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

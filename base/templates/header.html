@@ -1,0 +1,12 @@
+{% block header %}
+<div class="header__wrapper">
+    <nav class="header__nav">
+        <a href="{% url 'index' %}" class="header__item">Home</a>
+        <a href="{% url 'get_categories' %}" class="header__item">Categories</a>
+        <a href="{% url 'get_expenses' %}" class="header__item">Expenses</a>
+        <a href="{% url 'get_monthly_report' %}"  class="header__item">Report</a>
+        <a href="{% url 'subscribe' %}" class="header__item">Subscribe</a>
+        <a href="{% url 'send_mass_mail' %} " class="header__item">Send Report</a>
+    </nav>
+</div>
+{% endblock %}
